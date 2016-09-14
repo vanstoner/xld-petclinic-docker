@@ -1,6 +1,14 @@
 # xld-petclinic-docker
 A sample Java application that shows how to package war in a tomcat docker image and deploy them with XLDeploy
 
+## Pre-requisites
+
+This application expects a local docker registry
+
+```
+docker run -d -p 5000:5000 registry
+```
+
 ## Usage
 * set the `docker` environment when using a docker-machine
 
