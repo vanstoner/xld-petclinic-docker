@@ -2,7 +2,7 @@
 A sample Java application that shows how to package war in a tomcat docker image and deploy them with XLDeploy
 
 ## Usage
-* set the `docker` environment
+* set the `docker` environment when using a docker-machine
 
 ```
 export DOCKER_TLS_VERIFY="1"
@@ -11,6 +11,12 @@ export DOCKER_CERT_PATH="/Users/bmoussaud/.docker/machine/machines/docker-machin
 export DOCKER_MACHINE_NAME="docker-machine-virtualbox-1"
 # Run this command to configure your shell:
 # eval "$(docker-machine env docker-machine-virtualbox-1)"
+```
+
+* otherwise set the environment (e.g. for Native docker (MAC/Linux/Windows)
+
+```
+export DOCKER_HOST=unix:///var/run/docker.sock
 ```
 
 * run `mvn clean package`
